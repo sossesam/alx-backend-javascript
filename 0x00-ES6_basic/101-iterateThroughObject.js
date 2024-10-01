@@ -3,5 +3,5 @@ export default function iterateThroughObject(reportWithIterator) {
   for (const empName of reportWithIterator) {
     newstring.push(empName);
   }
-  return (newstring.toString().replaceAll(',', '|'));
+  return reportWithIterator = newstring.toString().replaceAll(',', '|');
 }

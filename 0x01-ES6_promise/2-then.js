@@ -4,12 +4,11 @@ export default function handleResponseFromAPI(promise) {
       resolve({
         status: 200,
         body: 'photo-profile-1',
-      })
-      console.log('Got a response from the API');;
+      });
+      console.log('Got a response from the API');
     } else {
       reject(new Error({}));
       console.log('Got a response from the API');
     }
-    console.log('Got a response from the API');
   });
 }

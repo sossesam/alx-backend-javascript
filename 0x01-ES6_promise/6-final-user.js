@@ -3,6 +3,6 @@ import signUpUser from './4-user-promise';
 
 export default function handleProfileSignup(firstName, lastName, fileName) {
   return Promise.all([signUpUser(firstName, lastName), uploadPhoto(fileName)])
-    .then((values) => values)
-    .catch(() => {});
+    .then((values) => { return values})
+    .catch(Error);
 }

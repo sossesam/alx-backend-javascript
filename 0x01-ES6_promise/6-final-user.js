@@ -10,5 +10,5 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
       });
       return arr;
     })
-    .catch((err) => ({ status: 100, value: err }));
+    .catch(Error);
 }

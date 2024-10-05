@@ -32,21 +32,24 @@ export default class HolbertonCourse {
   set name(name) {
     if (name.constructor !== String) {
       throw TypeError('Name must be a string');
+    } else {
+      this._name = name; // eslint-disable-line no-underscore-dangle
     }
-    this._name = name; // eslint-disable-line no-underscore-dangle
   }
 
   set length(length) {
     if (length.constructor !== Number) {
       throw TypeError('Length must be a number');
+    } else {
+      this._lenght = length; // eslint-disable-line no-underscore-dangle
     }
-    this._lenght = length; // eslint-disable-line no-underscore-dangle
   }
 
   set student(student) {
     if (student.constructor !== Array) {
       throw TypeError('Student must be an array');
+    } else {
+      this._student = student; // eslint-disable-line no-underscore-dangle
     }
-    this._student = student; // eslint-disable-line no-underscore-dangle
   }
 }

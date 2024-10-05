@@ -1,23 +1,20 @@
 export default class HolbertonCourse {
-  /* eslint-disable-line no-underscore-dangle */
   constructor(name, length, student) {
-    if (name.constructor === String) {
-      this._name = name; // eslint-disable-line no-underscore-dangle
-    } else {
+    if (name.constructor !== String) {
       throw TypeError('name must be a string');
     }
 
-    if (length.constructor === Number) {
-      this._lenght = length; // eslint-disable-line no-underscore-dangle
-    } else {
+    if (length.constructor !== Number) {
       throw TypeError('length must be a Number');
     }
 
-    if (student.constructor === Array) {
-      this._student = student; // eslint-disable-line no-underscore-dangle
-    } else {
+    if (student.constructor !== Array) {
       throw TypeError('student must be an Array');
     }
+
+    this._name = name; // eslint-disable-line no-underscore-dangle
+    this._lenght = length; // eslint-disable-line no-underscore-dangle
+    this._student = student; // eslint-disable-line no-underscore-dangle
   }
 
   get name() {
@@ -33,15 +30,14 @@ export default class HolbertonCourse {
   }
 
   set name(name) {
-    if (name.constructor === String) {
-      this._name = name; // eslint-disable-line no-underscore-dangle
-    } else {
+    if (name.constructor !== String) {
       throw TypeError('name must be a string');
     }
+    this._name = name; // eslint-disable-line no-underscore-dangle
   }
 
   set length(length) {
-    if (length.constructor === Number) {
+    if (length.constructor !== Number) {
       this._lenght = length; // eslint-disable-line no-underscore-dangle
     } else {
       throw TypeError('length must be a Number');
@@ -49,10 +45,9 @@ export default class HolbertonCourse {
   }
 
   set student(student) {
-    if (student.constructor === Array) {
-      this._student = student; // eslint-disable-line no-underscore-dangle
-    } else {
+    if (student.constructor !== Array) {
       throw TypeError('student must be an Array');
     }
+    this._student = student; // eslint-disable-line no-underscore-dangle
   }
 }

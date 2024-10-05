@@ -1,63 +1,58 @@
 export default class HolbertonCourse {
-  /* no-underscore-dangle */
+  /* eslint-disable-line no-underscore-dangle */
   constructor(name, length, student) {
     if (name.constructor === String) {
-      this._name = name;
+      this._name = name; // eslint-disable-line no-underscore-dangle
     } else {
       throw TypeError('name must be a string');
     }
 
     if (length.constructor === Number) {
-      this._lenght = length;
+      this._lenght = length; // eslint-disable-line no-underscore-dangle
     } else {
       throw TypeError('length must be a Number');
     }
 
     if (student.constructor === Array) {
-      this._student = student;
+      this._student = student; // eslint-disable-line no-underscore-dangle
     } else {
       throw TypeError('student must be an Array');
     }
   }
 
   get name() {
-    return this._name;
+    return this._name; // eslint-disable-line no-underscore-dangle
   }
 
   get length() {
-    return this._lenght;
+    return this._lenght; // eslint-disable-line no-underscore-dangle
   }
 
   get student() {
-    return this._student;
+    return this._student; // eslint-disable-line no-underscore-dangle
   }
 
   set name(name) {
     if (name.constructor === String) {
-      this._name = name;
+      this._name = name; // eslint-disable-line no-underscore-dangle
     } else {
       throw TypeError('name must be a string');
     }
-
-    this._name = name;
   }
 
   set length(length) {
     if (length.constructor === Number) {
-      this._lenght = length;
+      this._lenght = length; // eslint-disable-line no-underscore-dangle
     } else {
       throw TypeError('length must be a Number');
     }
-    this._lenght = length;
   }
 
   set student(student) {
     if (student.constructor === Array) {
-      this._student = student;
+      this._student = student; // eslint-disable-line no-underscore-dangle
     } else {
       throw TypeError('student must be an Array');
     }
-
-    this._student = student;
   }
 }

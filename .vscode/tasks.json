@@ -1,0 +1,14 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "build",
+			"path": "0x04-TypeScript",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "npm: build - 0x04-TypeScript",
+			"detail": "webpack"
+		}
+	]
+}

@@ -1,6 +1,4 @@
-module.exports = function displayMessage(str_argument){
-   process.stdout.write(str_argument + "\n")
-  }
+const displayMessage = (message) => console.log(message);
 
-
+module.exports = displayMessage;
 

@@ -1,16 +1,17 @@
 #!/usr/bin/node
 
-var readline = require('readline');
+process.stdin.setEncoding('utf8');
 
-var rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-  });
+process.stdout.write('What is your name? \n');
 
-  rl.question("Welcome to Holberton School, what is your name?", function(answer) {
-    process.stdout.write("Your name is: " + answer + "\n");
-    process.stdout.write("This important software is now closing\n")
-    rl.close();
- });
+process.stdin.on('readable', function() {
+  var chunk = process.stdin.read();
+  if (chunk !== null) {
+    process.stdout.write('Your name is: ' + chunk) + "\n";
+  }
+  process.stdin.end();
+});
 
-  
+process.stdin.on('end', function() {
+  process.stdout.write('This important software is now closing\n');
+});

@@ -41,12 +41,12 @@ function countStudents(path){
         }
         all_students.push(student)
     }
-    
+
     //sort the feild 
     console.log(`Number of students: ${all_students.length}`)
     
     Object.entries(fields).forEach(([key, value]) => {
-        console.log(`Number of students in ${key}: ${value.length}. ${value}`);
+        console.log(`Number of students in FIELD: ${key}. List: ${value.length}. ${value}`);
     });
     }
     }) 

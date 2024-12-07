@@ -35,7 +35,7 @@ const countStudents = (dataPath) => new Promise((resolve, reject) => {
       console.log(`Number of students: ${totalStudents}`);
       for (const [field, group] of Object.entries(studentGroups)) {
         const studentNames = group.map((student) => student.firstname).join(', ');
-        console.log(`Number of students in ${field}: ${group.length}. List: ${studentNames}`);
+        console.log(`Number of students in ${field}:countStudents(csv) ${group.length}. List: ${studentNames}`);
       }
       resolve(true);
     }

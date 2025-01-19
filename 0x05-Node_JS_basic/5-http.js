@@ -1,18 +1,19 @@
-const http = require('http')
-const csv = 'database.csv'
-const countStudents = require('./3-read_file_async')
+const http = require('http');
 
-const app = http.createServer(function (req, res) {
-  res.setHeader('Content-Type', 'text/html')
+const csv = 'database.csv';
+const countStudents = require('./3-read_file_async');
+
+const app = http.createServer((req, res) => {
+  res.setHeader('Content-Type', 'text/html');
   switch (req.url) {
     case '/':
-      res.setHeader('Content-Type', 'text/html')
-      res.end('Hello Holberton School!')
+      res.setHeader('Content-Type', 'text/html');
+      res.end('Hello Holberton School!');
       /* falls through */
 
     case '/students':
-      countStudents(csv)
+      countStudents(csv);
   }
-}).listen(1245)
+}).listen(1245);
 
-module.exports = app
+module.exports = app;
